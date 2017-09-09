@@ -91,13 +91,6 @@ describe("About Applying What We Have Learnt", function() {
 
   it("should count the ingredient occurrence (functional)", function () {
     /* chain() together map(), flatten() and reduce() */
-    // var ingredientCount = _.chain(products.map(function(product) {
-    //   return product.ingredients;
-    // })).flatten().reduce(function(count, ingredient) {
-    //   count[ingredient] ? count[ingredient] += 1 : count[ingredient] = 1;
-    //   return count;
-    // }, {}).value();
-
     var ingredientCount = _(products.map(function(product) {
       return product.ingredients;
     })).chain().flatten().reduce(function(count, ingredient) {
